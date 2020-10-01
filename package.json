@@ -1,4 +1,7 @@
 {
+  "devDependencies": {
+    "@fitbit/sdk": "~5.0.0"
+  },
   "fitbit": {
     "appUUID": "20ba8b5a-f3f9-4f8c-a5a3-10d9eacbd846",
     "appType": "app",
@@ -6,10 +9,15 @@
     "iconFile": "resources/icon.png",
     "wipeColor": "#4caf50",
     "requestedPermissions": [],
+    "buildTargets": [
+      "atlas",
+      "vulcan"
+    ],
     "i18n": {
-      "en": {
+      "en-US": {
         "name": "Barcodes"
       }
-    }
+    },
+    "defaultLanguage": "en-US"
   }
 }

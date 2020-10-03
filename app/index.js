@@ -31,6 +31,7 @@ var barcode = document.getElementById("barcode");
 var bartext = document.getElementById("bartext");
 var cNodes = new Array(15*11);
 const WIDTH = document.getElementById("main").width;
+const myButton = document.getElementById("myButton");
 
 function init() {
   for(let i = 0; i < 15; i++) {
@@ -91,6 +92,29 @@ function onKeyPress(e) {
       if(selected >= max) selected = 0;
     } else return;
   
+    let item = settings.cards[selected];
+    
+    barname.text = item.name || "";
+    frgd.style.fill = item.color || "#12D612";
+
+    if(clickTimer) clearTimeout(clickTimer);
+
+    clickTimer = setTimeout(() => {
+      clickTimer = null;
+      bartext.text = setBarcode(item.code, item.type);
+    }, 350);
+  }
+}
+
+// Below is code for the final build of the Barcode app for FitBit OS 5.0
+let button = document.getElementById("button");
+button.onactivate = function(evt) {
+  if(settings.cards) {
+    let max = settings.cards.length;
+    selected--;
+    if(selected < 0) selected = max - 1;
+      if(selected >= max) selected = 0;
+    
     let item = settings.cards[selected];
     
     barname.text = item.name || "";

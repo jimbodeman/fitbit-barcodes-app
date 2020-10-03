@@ -28,6 +28,13 @@
       <circle cx="100%-20" cy="20" r="20" fill="inherit" />
     </g>
 
+    <svg>
+      <use id="button" href="#text-button" y="65" height="100%" fill="fb-white" font-family="System-Regular" font-size="50">
+        <set href="#text" attributeName="fill" to="fb-black" />
+        <set href="#text" attributeName="y" to="20" />
+      </use>
+    </svg>
+
     <text id="caption" x="50%" y="48">...</text>
 
     <textarea id="intro" x="8%" width="84%">Go into app settings on your phone to add barcodes.</textarea>

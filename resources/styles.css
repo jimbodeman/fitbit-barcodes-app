@@ -38,3 +38,11 @@
   text-anchor: middle;
   text-length: 40;
 }
+
+.application-fill           { fill: fb-yellow; }
+.foreground-fill            { fill: fb-white; }
+.background-fill            { fill: fb-black; }
+
+#myButton #text {
+  text-buffer: "BUTTON";
+}

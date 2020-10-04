@@ -1,6 +1,6 @@
 # Barcodes app for Fitbit Versa 3/Sense
 
-![screenshot](Barcode-screenshot.png)
+![screenshot](Barcode2-screenshot.png)
 
 Features:
 - Customize the color of each barcode

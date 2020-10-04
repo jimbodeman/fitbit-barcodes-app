@@ -36,7 +36,7 @@ function setCard(name, value) {
     cards[i][name] = value;
 
   } else if(name === "bright") {
-    bright = (value === "true");
+    bright = (value === "max");
   }
 }
 
